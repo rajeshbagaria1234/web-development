@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<h1>color scheme switcher</h1>
+
+<div>
+<span class="button" id="green"></span>
+<span class="button" id="yellow"></span>
+<span class="button" id="red"></span>
+
+</div>
+<h2>click in any of box</h2>
+
+
+
+</body>
+
+<style>
+
+.button{
+
+    border: solid rgb(152, 86, 86) 5px;
+    width: 100px;
+    height: 100px;
+    margin: 70px;
+   /* padding: 50px; */
+    display: flex;
+align-items: center;
+border-radius: 20px;
+    
+}
+ 
+#green{
+    background-color: green;
+    overflow: auto;
+}
+
+#red{
+    background-color: red;
+    overflow: auto;
+}
+#yellow{
+    background-color: yellow;
+    overflow: auto;
+}
+
+</style>
+
+<script>
+
+    const buttons=document.querySelectorAll(".button")
+
+    const body=document.querySelector("body")
+
+   buttons.forEach(function (button){
+
+button.addEventListener("click",function(event){
+
+   
+    const targetid=event.target;
+    
+    if(targetid.id==="green"){
+
+        body.style.backgroundColor="green"
+    }
+    if(targetid.id==="yellow"){
+        
+        body.style.backgroundColor="yellow"
+    }
+    if(targetid.id==="red"){
+        
+        body.style.backgroundColor="red"
+    }
+
+}) 
+   })
+   
+</script>
+
+</html>
